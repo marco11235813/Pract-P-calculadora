@@ -85,6 +85,10 @@ class calcular:
                 pot **= nro
         print(pot)
         return
+    
+    def raiz():
+        return
+    
     def factorial(self):
         for x in self.numeros:
             if '!' in self.numeros:
