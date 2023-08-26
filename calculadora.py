@@ -12,13 +12,10 @@ def factorial(numero):
 
 
 class calcular:
-
-
         
     def __init__(self):
-        print("\nOperaciones:\n\n+ --> Suma\n- --> Resta\n* --> Multiplicación\n/ --> División\n// --> División (cociente entero)\n! --> Factorial\n** --> Potenciación")
+        print("\nOperaciones:\n\n+ --> Suma\n- --> Resta\n* --> Multiplicación\n/ --> División\n// --> División (cociente entero)\n! --> Factorial\n** --> Potenciación\nrad --> Raíz")
         self.numeros= input('\nIngresa la operacion que quieres realizar: ')
-
 
 
     def suma(self):
@@ -58,6 +55,7 @@ class calcular:
                 multi *= nro
         print(multi)
         return
+    
     def division(self):
         div= 0
         for x in self.numeros:
@@ -86,7 +84,18 @@ class calcular:
         print(pot)
         return
     
-    def raiz():
+    def raiz(self):
+        radical= 0
+        for x,num in enumerate(self.numeros):
+            if 'rad' in self.numeros:
+                numeros= self.numeros.split('rad')
+                numeros= [int(x) for x in numeros]
+        for index, nro in enumerate(numeros):
+            if index == 0:
+                radical = nro
+            else:
+                radical= radical ** (1/nro)
+        print(radical)
         return
     
     def factorial(self):
@@ -114,5 +123,4 @@ calculadora.division()
 
 ## no recibe numeros tipo float, ya que directamente convierte cualquier numero ingresado en int
 ## optimizar para que realice mas de una operacion a la vez
-## agregar mas opciones para operar(raiz, etc)
 ## error si ingresamos solo un valor
